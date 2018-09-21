@@ -67,10 +67,10 @@ top: true
 # Miscellaneous
 baidu_analytics: ''
 google_analytics: ''
-favicon: /source/assets/img/xiaoha.jpg
+favicon: favicon.png
 
 #你的头像url
-avatar:
+avatar: /source/assets/img/xiaoha.jpg
 
 #是否开启分享
 share_jia: true
@@ -94,7 +94,7 @@ disqus: false
 
 #5、Gitment
 gitment_owner: false      #你的 GitHub ID
-gitment_repo: ''          #存储评论的 repo
+gitment_repo: 'https://gitee.com/ab5051/issue.git'          #存储评论的 repo
 gitment_oauth:
   client_id: ''           #client ID
   client_secret: ''       #client secret
