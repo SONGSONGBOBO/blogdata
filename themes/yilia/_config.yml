@@ -4,7 +4,7 @@ menu:
   主页: /
   随笔: /tags/随笔/
   相册: /photos
-  归档: /
+  归档: /archives
 
 # SubNav
 subnav:
@@ -70,7 +70,7 @@ google_analytics: ''
 favicon: favicon.png
 
 #你的头像url
-avatar: /source/assets/img/xiaoha.jpg
+avatar: /assets/img/xiaoha.jpg
 
 #是否开启分享
 share_jia: true
