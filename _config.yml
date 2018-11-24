@@ -12,8 +12,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://gitee.com/ab5051/blog
-root: /blog
+url: http://imsongbo.com
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -78,9 +78,26 @@ theme: yilia
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git 
-  repository: https://gitee.com/ab5051/blog.git
+  repository: https://github.com/SONGSONGBOBO/SONGSONGBOBO.github.io.git 
   branch: master 
   message: blog
+
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  log: false
+  model:
+    use: live2dz16
+  display:
+    position: right
+    width: 100
+    height: 200
+  mobile:
+    show: true
 
 jsonContent:
   meta: false

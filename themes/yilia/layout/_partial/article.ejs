@@ -2,9 +2,14 @@
   <div class="article-inner">
     <% if (post.link || post.title){ %>
       <header class="article-header">
+         
         <%- partial('post/title', {class_name: 'article-title'}) %>
         <% if (!post.noDate){ %>
         <%- partial('post/date', {class_name: 'archive-article-date', date_format: null}) %>
+        <% } %>
+
+        <% if (theme.word.word_count && !post.no_word_count){ %>
+          <%- partial('post/word') %>
         <% } %>
       </header>
     <% } %>
@@ -87,7 +92,28 @@
       url: config.url+url_for(post.path)
     }) %>
   <% } %>
+
+
+
+  <% if (theme.valine.on && theme.valine.appid && theme.valine.appkey){ %>
+    <section id="comments" class="comments">
+      <style>
+        .comments{margin:30px;padding:10px;background:#fff}
+        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+      </style>
+      <%- partial('post/valine', {
+        key: post.slug,
+        title: post.title,
+        url: config.url+url_for(post.path)
+        }) %>
+    </section>
+  <% } %>  
   
+  <% if (theme.livere.on){ %>
+    <%- partial('post/livere') %>
+  <% } %>
+
+
   <% if (theme.wangyiyun){ %>
   <%- partial('post/wangyiyun', {
       key: post.slug,
@@ -96,6 +122,8 @@
     }) %>
   <% } %>
 
+
+  
   <% if (theme.changyan_appid && theme.changyan_conf){ %>
   <%- partial('post/changyan', {
       key: post.slug,
@@ -103,6 +131,8 @@
       url: config.url+url_for(post.path)
     }) %>
   <% } %>
+
+
 
   <% if (theme.disqus || config.disqus_shortname){ %>
     <section id="comments">
@@ -122,6 +152,8 @@
     </section>
   <% } %>
 
+  
+  
   <% if (theme.gitment_owner && theme.gitment_repo &&theme.gitment_oauth && theme.gitment_oauth.client_id && theme.gitment_oauth.client_secret){ %>
   <%- partial('post/gitment', {
       key: post.slug,
@@ -129,4 +161,7 @@
       url: config.url+url_for(post.path)
     }) %>
   <% } %>
+
+
+  
 <% } %>

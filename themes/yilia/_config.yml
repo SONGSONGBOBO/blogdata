@@ -5,14 +5,16 @@ menu:
   随笔: /tags/随笔/
   相册: /photos
   归档: /archives
+  留言: /message
+
 
 # SubNav
 subnav:
-  github: "#"
+  github: "https://github.com/SONGSONGBOBO"
   #weibo: "#"
   #rss: "#"
-  zhihu: "#"
-  qq: "#"
+  zhihu: "https://www.zhihu.com/people/song-bo-72-80/activities"
+  qq: "http://wpa.qq.com/msgrd?v=3&uin=1127568060&site=qq&menu=yes"
   #weixin: "#"
   #jianshu: "#"
   #douban: "#"
@@ -37,7 +39,7 @@ root: /
 # 文章太长，截断按钮文字
 excerpt_link: more
 # 文章卡片右下角常驻链接，不需要请设置为false
-show_all_link: '展开全文'
+show_all_link: false #'展开全文'
 # 数学公式
 mathjax: false
 # 是否在新窗口打开链接
@@ -67,7 +69,7 @@ top: true
 # Miscellaneous
 baidu_analytics: ''
 google_analytics: ''
-favicon: favicon.png
+favicon: /favicon.png
 
 #你的头像url
 avatar: /assets/img/xiaoha.jpg
@@ -94,10 +96,25 @@ disqus: false
 
 #5、Gitment
 gitment_owner: false      #你的 GitHub ID
-gitment_repo: 'https://gitee.com/ab5051/issue.git'          #存储评论的 repo
+gitment_repo: 'https://github.com/SONGSONGBOBO/issue.github.io.git'          #存储评论的 repo
 gitment_oauth:
   client_id: ''           #client ID
   client_secret: ''       #client secret
+
+#6.来比力
+livere: 
+  on: false
+
+
+#7 valine
+valine: 
+  on: ture
+  appid: xRy9R86QuuAtHfasncEeUIA8-gzGzoHsz #Leancloud应用的appId
+  appkey: qfXprlaTkN6yT6LQ3Okbz1Jc #Leancloud应用的appKey
+  verify: false #验证码
+  notify: false #评论回复提醒
+  avatar: wavatar #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
+  placeholder: 帅的人已经留言了噢～ #评论框占位符
 
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
@@ -111,17 +128,22 @@ slider:
   # 是否默认展开tags板块
   showTags: false
 
+#字数统计和阅读时长
+word:
+  word_count: ture
+
+
 # 智能菜单
 # 如不需要，将该对应项置为false
 # 比如
 #smart_menu:
 #  friends: false
 smart_menu:
-  innerArchive: '所有文章'
-  #friends: '友链'
+  innerArchive: '标签云'
+  friends: false #'友链'
   aboutme: '关于本人'
 
-friends:
+friends: 
   友情链接1: http://localhost:4000/
   友情链接2: http://localhost:4000/
   友情链接3: http://localhost:4000/
